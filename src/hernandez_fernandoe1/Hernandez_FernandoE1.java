@@ -27,7 +27,32 @@ public class Hernandez_FernandoE1 {
                 int opcion = lea.nextInt();
 
                 if (opcion == 1) {
+                    int filas = 0;
+                    int numImprimir = 1;
+                    int numinicial = 1;
+                    int numerofila = 1;
+                    int suma = 0;
 
+                    try {
+                        System.out.println("Ingrese la cantidad de filas que desea: ");
+                        filas = lea.nextInt();
+
+                        for (int contador = 1; contador <= filas; contador++) {
+                            suma = 0;
+
+                            for (numerofila = 1; numerofila <= contador; numerofila++) {
+                                System.out.print(numImprimir + " ");
+                                suma += numImprimir;
+                                numImprimir += 2;
+                            }
+                            System.out.print("= " + suma);
+                            System.out.println("");
+                        }
+
+                    } catch (InputMismatchException error) {
+                        System.out.println("INGRESE UN CARACTER VALIDO");
+                        lea.nextLine();
+                    }
                 }
                 if (opcion == 2) {
                     int numeroEntero = 0;
@@ -56,7 +81,6 @@ public class Hernandez_FernandoE1 {
                     promedio = suma / cantNumIngresados;
                     System.out.println("el numero promedio es de: " + promedio + "");
                     System.out.println("el numero mayor que ingresaste: " + numeroMayor + "");
-                    break;
                 }
 
                 if (opcion == 3) {
